@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">  
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Maven+Pro&display=swap" rel="stylesheet">
+    <title>Laverna-Sec</title>
+</head>
+<body>
+    <nav class="outer-hamburger-container">
+        <button class="hamburger-position hamburger hamburger--spring" id="hamburg" type="button" aria-label="Menu" aria-controls="navigation">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </nav>
+    <button class="scroll-button up-button visible" id="up" type="button" aria-label="Scroll-Down" aria-controls="navigation">
+        <div class="arrow up-arrow"></div>
+    </button>
+    <button class="scroll-button down-button visible" id="down" type="button" aria-label="Scroll-Up" aria-controls="navigation">
+        <div class="arrow down-arrow"></div>
+    </button>
+        
+    <nav class="link-nav">
+        <div class="menu-item-container">
+            <button class="menu-item" type="button" aria-label="Home" aria-controls="navigation">Home</button>
+            <button class="menu-item" type="button"  aria-label="About" aria-controls="navigation">About</button>
+            <button class="menu-item" type="button"  aria-label="Services" aria-controls="navigation">Services</button>
+            <button class="menu-item" type="button"  aria-label="Contact" aria-controls="navigation">Contact</button>
+        </div>
+    </nav>
+    <div class="main-content-container open home-background" id="contentContainer">
+        <footer class="foot">                
+                &copy; <script>document.write(new Date().getFullYear())</script> Skinner Aviation LLC
+    </footer>
+        <div class="main-content" id="mainContent">
+            
+            <header class="header" id="header"> 
+                <div class="logo-slogan-container">
+                    <div class="logo-container">
+
+                    </div>
+                    <article class="slogan-container">
+                        <h1 class="business-name">
+                            Skinner Aviation
+                        </h1>
+                        <p class="slogan">
+                            SOME SLOGAN
+                        </p>
+                    </article>
+                </div>
+                <nav class="header-nav">
+                        <button class="header-menu-item" type="button" aria-label="Home" aria-controls="navigation">Home</button>
+                        <button class="header-menu-item" type="button"  aria-label="About" aria-controls="navigation">About</button>
+                        <button class="header-menu-item" type="button"  aria-label="Services" aria-controls="navigation">Services</button>
+                        <button class="header-menu-item" type="button"  aria-label="Contact" aria-controls="navigation">Contact</button>
+                </nav>                    
+            </header>                
+            
+            <section class="inner-content about" id= "about">
+                About
+            </section>
+            
+            <div class="home">
+                <div class=home-image>
+                            
+                </div>
+                <div style="height:1px;width:100vw" id="checkContentTop"></div>
+            </div>
+            
+            <section class="inner-content services" id= "services">
+                Services
+            </section>
+            <div style="height:1px;width:100vw" id="checkContent"></div>
+            <div class="inner-content">
+                <div class="contact-image">
+
+                </div>                
+            </div>
+
+            <section class="inner-content contact" id= "contact">
+                Contact
+            </section>
+            <div style="height:1px;width:100vw" id="checkBottom"></div>
+        </div>
+    </div>
+</body>
+<script src="./javascript/main.js"></script>
+</html>

@@ -1,0 +1,464 @@
+/* Browser */
+body{
+    padding:0px;
+    margin:0px;
+}
+/* Browser End */
+
+/* Hamburger */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: rgba(0,0,0,0);
+  border: 0;
+  margin: 0;
+  overflow: visible; 
+  }
+  .hamburger:hover {}
+
+  .hamburger.is-active:hover {}
+
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #ffffff; 
+    }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; 
+  }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; 
+  }
+
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; 
+    }
+  
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; 
+    }
+
+  .hamburger-inner::before {
+    top: -10px; 
+    }
+
+  .hamburger-inner::after {
+    bottom: -10px; 
+    }
+
+.hamburger--spring .hamburger-inner {
+  top: 2px;
+  transition: background-color 0s 0.13s linear; 
+  }
+
+  .hamburger--spring .hamburger-inner::before {
+    top: 10px;
+    transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+    }
+
+  .hamburger--spring .hamburger-inner::after {
+    top: 20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+    }
+
+.hamburger--spring.is-active .hamburger-inner {
+  transition-delay: 0.22s;
+  background-color: transparent !important; 
+  }
+
+  .hamburger--spring.is-active .hamburger-inner::before {
+    top: 0;
+    transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 10px, 0) rotate(45deg); 
+    }
+
+  .hamburger--spring.is-active .hamburger-inner::after {
+    top: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 10px, 0) rotate(-45deg); 
+    }    
+/* End Hamburger */
+
+/* Tests */
+
+/* End Tests */
+
+/* Main Page CSS */
+
+.header{
+  width:calc(100vw-6px);
+  height:415px;
+  background-image: url("../images/headermain.jpg");
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: black 3px solid;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo-container{
+  height:200px;
+  width:200px;
+  margin-left:20px;
+  background-image: url(../images/logo-placeholder-png.png);
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+}
+
+.logo-slogan-container{
+  display:flex;
+  flex-direction:row;
+  height:253px;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.slogan-container{
+  width:auto;
+  height:253px;
+  display:flex;
+  flex-direction:column;  
+  margin-left:20px;
+  margin-bottom:30px;
+}
+
+.business-name{
+  color:black;
+  font-size:65px;
+  height:55px;
+  margin-bottom:0px;
+  margin-top:75px;
+  font-family: 'Cinzel', serif;
+}
+
+.slogan{
+  color:black;
+  font-size:25px;
+  width:auto;
+  height:60px;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight:bold;
+  border-top: 1px solid white;
+}
+
+.header-nav{
+  height:253px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items: flex-start;
+}
+
+.header-menu-item{
+  margin-bottom:20px;
+  color:black;
+  background-color: rgba(0,0,0,0);
+  overflow: visible;
+  font-size:40px;
+  text-align:center;
+  padding:0px;
+  border:0px solid white;
+  font-family: 'Maven Pro', sans-serif;
+  outline: none;
+  cursor: pointer;
+  margin-right:20px;
+}
+
+  .header-menu-item:hover{
+    border-bottom:3px solid black;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .header-menu-item{
+      font-size:25px;
+      margin-bottom:0;
+    }
+    .logo-slogan-container{
+      flex-direction:column;
+      height: auto;
+    }
+    .business-name{
+      font-size:40px;
+      margin-bottom:0px;
+      margin-top:0px;
+      text-align:center;
+      height:auto;
+    }
+    .header{
+      height:auto;
+      width:100%;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .slogan-container{
+      height:auto;
+      margin:0px;
+    }
+
+    .slogan{
+      font-size:20px;
+      height:auto;      
+      color:white;
+      background-color:rgba(0,0,0,.7);
+      padding: 20px;
+      border-radius: 30px;
+    }
+    .header-nav{
+      height:auto;
+    }
+
+    .header-menu-item{
+      COLOR:WHITE;
+      background-color:black;
+    }
+    .header-menu-item:hover{
+      COLOR:black;
+      background-color:white;
+    }
+
+  }
+
+.home{
+  height:calc(100vh-253px);
+  width:100vw;
+}
+
+.about{
+  background-color:lightgray;
+}
+
+.services{
+  background-color:lightgray;
+}
+
+.contact{
+  background-color:lightgray;
+}
+
+.home-image{
+  height:100vh;
+  width:100vw;
+  background-color: rgba(0,0,0,0);
+}
+
+.contact-image{
+  height:100vh;
+  width:100vw;
+  background-color: rgba(0,0,0,0);
+}
+.visible{
+    z-index: 5;
+}
+
+.invisible{
+    z-index:-1;
+}
+
+.hamburger-position{
+    position:absolute;
+    top:40px;
+    right:5vw;
+    z-index:5;
+    outline:none;
+}
+.scroll-button{
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(0,0,0,0);
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    background-color: rgba(32, 29, 29, 0.1);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    outline:none;
+}
+
+    .scroll-button:hover{
+        background-color: rgba(32, 29, 29, .7);
+    }
+    .scroll-button:hover > div{
+        border: 5px solid rgba(255,255,255,.7);
+        border-bottom: 0px;
+        border-right: 0px;
+    }
+.up-button{
+   position: absolute;
+   top:40px;
+   left:2vw;
+}
+
+.down-button{
+   position: absolute;
+   bottom:40px;
+   left:2vw;
+}
+
+.arrow{
+    height:20px;
+    width:20px;
+    border: 5px solid rgba(39, 39, 39, 0.2);
+    border-bottom: 0px;
+    border-right: 0px;
+    border-radius: 0px 5px 0px 5px;
+}
+
+.up-arrow{
+    transform: rotate(45deg);
+    margin-top:10px;
+}
+
+.down-arrow{
+    transform: rotate(225deg); 
+    margin-bottom:10px;   
+}
+
+.main-content-container{
+    width: 100vw;
+    height:100vh;
+    position: absolute;
+    top:0px;
+    z-index: 1; 
+    overflow: hidden;    
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;  
+}
+
+.home-background{
+  background-image: url(../images/headerimage.jpg);
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+
+.content-background{
+  background-image: url(../images/banner2.jpg);
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+
+.open{
+    width:100vw;
+    height:100vh;
+}
+
+.closed{
+    width:0px;
+    height:0px;
+    margin-left:50vw;
+    margin-right:50vw;
+    margin-top:50vh;
+    margin-bottom:50vh;
+}
+
+.main-content{
+    position: absolute;
+    top:0px;
+    width:100vw;
+    height:100vh;
+    background-color:rgba(0,0,0,0);
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;  
+    padding: 0px;
+    margin:0px;
+}
+
+.main-content::-webkit-scrollbar { 
+    width: 0;
+}
+
+.inner-content{
+    width: 100vw;
+    height:100vh;
+}
+.foot{
+  width:100%;
+  height:20px;
+  z-index: 10;
+  position: absolute;
+  bottom:0;
+  left:0;
+  background-color:black;
+  color:white;
+  text-align: end;
+}
+/* Main End Page CSS */
+
+/* Nav Page CSS */
+.link-nav{
+    background-color:black;
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    top:0px;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    z-index: 0;
+}
+
+.menu-item-container{
+    width:500px;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+.menu-item{
+    width:500px;
+    height:60px;
+    color:white;
+    background-color: rgba(0,0,0,0);
+    overflow: visible;
+    font-size:80px;
+    text-align:center;
+    margin-bottom: 50px;
+    padding:0px;
+    border:0px solid white;
+    font-family: 'Maven Pro', sans-serif;
+    outline: none;
+    cursor: pointer;
+}
+
+    .menu-item:hover{
+        font-size:90px;
+    } 
+
+/* End Nav Page CSS */
