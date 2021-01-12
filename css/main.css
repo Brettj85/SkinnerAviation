@@ -28,7 +28,7 @@ body{
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
-    background-color: #000000; 
+    background-color:  #ffffff; 
     }
 
 .hamburger-box {
@@ -114,7 +114,6 @@ body{
   background-position: center; 
   background-repeat: no-repeat;
   background-size:cover;
-  border: black 3px solid;
   display:flex;
   flex-direction:row;
   align-items:center;
@@ -261,7 +260,7 @@ body{
   width:90vw;
   height:40vh;
   background-color:white;
-  border:1px,solid, #35C0ED;
+  border:1px solid #35C0ED;
   border-radius: 15px;
 }
 
@@ -278,7 +277,7 @@ body{
   height:50vh;
   background-color:white;
   width: 24vw;
-  border:1px,solid, #35C0ED;
+  border:1px solid #35C0ED;
   border-radius: 15px;
 }
 
@@ -450,7 +449,11 @@ body{
 
 /* Nav Page CSS */
 .link-nav{
-    background-color:black;
+  background-color:black;
+    background-image: url(../images/OriginalonTransparentnowords.png);
+    /* background-position: center;  */
+  background-repeat: no-repeat;
+  background-size:contain;
     width:100vw;
     height:100vh;
     position: absolute;
@@ -472,7 +475,7 @@ body{
 .menu-item{
     width:500px;
     height:60px;
-    color:white;
+    color: #ffffff;
     background-color: rgba(0,0,0,0);
     overflow: visible;
     font-size:80px;
