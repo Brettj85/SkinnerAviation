@@ -74,15 +74,15 @@ var update = function(){
     if(visibleY(document.getElementById('header'))) {
         up.classList.remove("visible");
         up.classList.add("invisible");
-        hamburg.classList.remove("hamburger-position");
-        hamburg.classList.add("invisible");
+        //hamburg.classList.remove("hamburger-position");
+        // hamburg.classList.add("invisible");
     }
     else
     {
         up.classList.add("visible");
         up.classList.remove("invisible");
-        hamburg.classList.add("hamburger-position");
-        hamburg.classList.remove("invisible");
+        //hamburg.classList.add("hamburger-position");
+        //hamburg.classList.remove("invisible");
     }
     if(visibleY(document.getElementById('checkBottom'))) {
         down.classList.remove("visible");
