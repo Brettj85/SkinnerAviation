@@ -118,6 +118,7 @@ body{
   flex-direction:row;
   align-items:center;
   justify-content:center;
+  
 }
 
 .logo-container{
@@ -194,53 +195,7 @@ body{
   }
 
   @media only screen and (max-width: 600px) {
-    .header-menu-item{
-      font-size:25px;
-      margin-bottom:0;
-    }
-    .logo-slogan-container{
-      flex-direction:column;
-      height: auto;
-    }
-    .business-name{
-      font-size:40px;
-      margin-bottom:0px;
-      margin-top:0px;
-      text-align:center;
-      height:auto;
-    }
-    .header{
-      height:auto;
-      width:100%;
-      flex-direction:column;
-      justify-content:center;
-    }
-
-    .slogan-container{
-      height:auto;
-      margin:0px;
-    }
-
-    .slogan{
-      font-size:20px;
-      height:auto;      
-      color:white;
-      background-color:rgba(0,0,0,.7);
-      padding: 20px;
-      border-radius: 30px;
-    }
-    .header-nav{
-      height:auto;
-    }
-
-    .header-menu-item{
-      COLOR:WHITE;
-      background-color:black;
-    }
-    .header-menu-item:hover{
-      COLOR:black;
-      background-color:white;
-    }
+    
 
   }
 
@@ -295,15 +250,38 @@ body{
   border-radius: 15px;
 }
 
-.contact {
+.split-services{
   display:flex;
-  justify-content: center;
-  align-items: center;
-  
+  flex-direction: row;
+  justify-content:space-between;
+  align-items:center;
+  border:0px solid #35C0ED;
+  background-color:rgba(0, 0, 0, 0);
 }
 
+.service-split{
+  width: 29vw;
+  height:60vh;
+  background-color:white;
+  border:1px solid #35C0ED;
+  border-radius: 15px;
+}
+
+.contact {
+  height: 100vh;
+  display:flex;
+  flex-direction: row;
+  justify-content:space-around;  
+}
+.contact-info-container {
+  width:20vw;
+  height:90vh;
+  border:1px solid #35C0ED;
+  border-radius: 15px;
+  background-color:#ffffff;
+}
 .contact-form-container {
-  width:90vw;
+  width:60vw;
   height:90vh;
   border:1px solid #35C0ED;
   border-radius: 15px;
@@ -406,14 +384,14 @@ body{
   background-image: url(../images/wp2113384.jpg);
   background-position: center; 
   background-repeat: no-repeat;
-  background-size: 100vw 100vh;
+  background-size: 100vw 100vh;  
 }
 
 .content-background{
   background-image: url(../images/SJBb7H.jpg);
   background-position: center; 
   background-repeat: no-repeat;
-  background-size: 100vw 100vh;
+  background-size: 100vw 100vh;  
 }
 
 .open{
@@ -472,7 +450,7 @@ body{
 .link-nav{
   background-color:black;
     background-image: url(../images/OriginalonTransparentnowords.png);
-    /* background-position: center;  */
+    /* background-position: center;   */
   background-repeat: no-repeat;
   background-size:contain;
     width:100vw;
@@ -515,3 +493,11 @@ body{
     } 
 
 /* End Nav Page CSS */
+
+.maketrasition {
+  -webkit-transition: background 1s ease-in-out;
+-moz-transition: background 1s ease-in-out;
+-o-transition: background 1s ease-in-out;
+-ms-transition: background 1s ease-in-out;    
+transition: background 1s ease-in-out;
+}
