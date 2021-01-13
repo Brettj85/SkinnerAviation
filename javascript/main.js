@@ -62,7 +62,7 @@ function hamburgerAction() {
 //     container.scrollBy(0, h);
 // });
 
-async function zIndex(time){    
+async function zIndex(time){
     var result = await sleep(time);
 }
 
@@ -80,7 +80,7 @@ function sleep(time) {
 }
 
 var visibleY = function(el) {
-  var rect = el.getBoundingClientRect(), top = rect.top, height = rect.height, 
+  var rect = el.getBoundingClientRect(), top = rect.top, height = rect.height,
     el = el.parentNode;
   do {
     rect = el.getBoundingClientRect();
@@ -145,3 +145,8 @@ var update = function(){
 attachEvent(document.getElementById('mainContent'), "scroll", update);
 attachEvent(window, "resize", update);
 update();
+
+
+
+
+
