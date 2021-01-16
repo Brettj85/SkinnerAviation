@@ -1,5 +1,7 @@
 document.getElementById("hamburg").addEventListener("click", hamburgerAction);
-
+document.getElementById("CFIS").addEventListener("click", cfiSwap);
+document.getElementById("CFIS2").addEventListener("click", cfiSwap);
+document.getElementById("CFISExpand").addEventListener("click", cfiExpand);
 
 var base_resource = document.querySelectorAll(".menu-item");
 for (var i = 0; i < base_resource.length; i++) {
@@ -29,6 +31,37 @@ function scrollPageTo(target) {
     document.getElementById('mainContent').scrollTop = topPos;
     zIndex(500);
     hamburgerAction()
+}
+
+function cfiSwap() {
+    var cfi = document.getElementById("cfi2");
+    cfi.classList.toggle("cfi-open");
+    cfi.classList.toggle("cfi-closed");        
+}
+
+function cfiExpand() {
+    var cfi2 = document.getElementById("cfi2");
+    var cfi1 = document.getElementById("cfi1");
+    var cfise = document.getElementById("CFISExpand");
+    cfi2.classList.toggle("cfi-2-expanded");
+    cfi1.classList.toggle("expanded-cfi");
+    var cfiMain = document.getElementById("cfimain");
+    cfiMain.classList.toggle("expanded-cfi"); 
+    var aboutR = document.getElementById("aboutRight");
+    aboutR.classList.toggle("about-right-expanded");
+    var aboutT = document.getElementById("aboutTop");
+    aboutT.classList.toggle("fix-flex");
+    var aboutR = document.getElementById("aboutRight")
+    // aboutR.classList.toggle("row");
+    aboutR.classList.toggle("column");
+    document.getElementById("businessOne").classList.toggle("rev-rotate");
+    document.getElementById("businessTwo").classList.toggle("rev-rotate");
+    if(cfiMain.classList.contains("expanded-cfi")){
+        cfise.innerHTML="Less Info";
+    }
+    else{
+        cfise.innerHTML="More Info";
+    }
 }
 
 function hamburgerAction() {
