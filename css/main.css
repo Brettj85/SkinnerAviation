@@ -604,35 +604,44 @@ background-position: center;
 }
 
 .services{
+  width:90vw;
+  height:183vh;
   display:flex;
   flex-direction:column;
   justify-content: space-evenly;
   align-items: center;
+  position:relative;
 }
+
+.hidden-container{
+  width:90vw;
+  height:100vh;
+  position:absolute;
+  left:5vw;
+  top:41.5vh;
+  -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+    z-index: 5;
+    
+}
+
+.dec-index{
+  z-index: 4;
+}
+
+.picture-changer{
+  height:100vh;
+  width:90vw;  
+  position:relative;
+}
+
 .services-item{
   width:90vw;
   height:60vh;
-  background-color:white;
   border:1px solid #35C0ED;
-  border-radius: 15px;
-  
-}
-
-.split-services{
-  display:flex;
-  flex-direction: row;
-  justify-content:space-between;
-  align-items:center;
-  border:0px solid #35C0ED;
-  background-color:rgba(0, 0, 0, 0);
-}
-
-.service-split{
-  width: 29vw;
-  height:60vh;
-  background-color:white;
-  border:1px solid #35C0ED;
-  border-radius: 15px;
+  border-radius: 15px; 
 }
 
 .contact {
@@ -890,3 +899,334 @@ transition: background 1s ease-in-out;
   background-size:cover
 }
 
+
+
+.three-d-container{
+margin:2.4vh auto;
+width:48vh;
+height:48vh;
+z-index: 4;
+border-radius: 3px;
+position:relative;
+-webkit-perspective:350vh;
+   -moz-perspective:350vh;
+    -ms-perspective:350vh;
+     -o-perspective:350vh;
+        perspective:350vh;
+-webkit-box-shadow:0 3.2vh 9.6vh rgba(0,0,0,0.2),			  			  0 0 3.2vh rgba(0,0,0,0.2) inset;
+   -moz-box-shadow:0 3.2vh 9.6vh rgba(0,0,0,0.2),			  			  0 0 3.2vh rgba(0,0,0,0.2) inset;
+        box-shadow:0 3.2vh 9.6vh rgba(0,0,0,0.2),			  			  0 0 3.2vh rgba(0,0,0,0.2) inset;
+        
+}
+.three-d-cube{
+width:100%;
+height:100%;
+position:absolute;
+-webkit-transition:-webkit-transform 1s;
+   -moz-transition:   -moz-transform 1s;
+     -o-transition:     -o-transform 1s;
+        transition:        transform 1s;
+-webkit-transform-style:preserve-3d;
+   -moz-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+     -o-transform-style:preserve-3d;
+        transform-style:preserve-3d;
+-webkit-transform:translateZ( -24vh );
+   -moz-transform:translateZ( -24vh );
+    -ms-transform:translateZ( -24vh );
+     -o-transform:translateZ( -24vh );
+        transform:translateZ( -24vh );
+}
+.three-d-cube .three-d-item{
+width:100%;
+height:100%;
+display:block;
+margin:0;
+position:absolute;
+}
+.three-d-cube .three-d-item img{
+width:100%;
+height:100%;
+display:inline-block;
+margin:0;
+}
+.three-d-item:nth-child(1){
+-webkit-transform:rotateY(   0deg ) translateZ( 24vh );
+   -moz-transform:rotateY(   0deg ) translateZ( 24vh );
+    -ms-transform:rotateY(   0deg ) translateZ( 24vh );
+     -o-transform:rotateY(   0deg ) translateZ( 24vh );
+        transform:rotateY(   0deg ) translateZ( 24vh );
+}
+.three-d-item:nth-child(2){
+-webkit-transform:rotateX( 180deg ) translateZ( 24vh );
+   -moz-transform:rotateX( 180deg ) translateZ( 24vh );
+    -ms-transform:rotateX( 180deg ) translateZ( 24vh );
+     -o-transform:rotateX( 180deg ) translateZ( 24vh );
+        transform:rotateX( 180deg ) translateZ( 24vh );
+}
+.three-d-item:nth-child(3){
+-webkit-transform:rotateY(  90deg ) translateZ( 24vh );
+   -moz-transform:rotateY(  90deg ) translateZ( 24vh );
+    -ms-transform:rotateY(  90deg ) translateZ( 24vh );
+     -o-transform:rotateY(  90deg ) translateZ( 24vh );
+        transform:rotateY(  90deg ) translateZ( 24vh );
+}
+.three-d-item:nth-child(4){
+-webkit-transform:rotateY( -90deg ) translateZ( 24vh );
+   -moz-transform:rotateY( -90deg ) translateZ( 24vh );
+    -ms-transform:rotateY( -90deg ) translateZ( 24vh );
+     -o-transform:rotateY( -90deg ) translateZ( 24vh );
+        transform:rotateY( -90deg ) translateZ( 24vh );
+}
+.three-d-item:nth-child(5){
+-webkit-transform:rotateX(  90deg ) translateZ( 24vh );
+   -moz-transform:rotateX(  90deg ) translateZ( 24vh );
+    -ms-transform:rotateX(  90deg ) translateZ( 24vh );
+     -o-transform:rotateX(  90deg ) translateZ( 24vh );
+        transform:rotateX(  90deg ) translateZ( 24vh );
+}
+.three-d-item:nth-child(6){
+-webkit-transform:rotateX( -90deg ) translateZ( 24vh );
+   -moz-transform:rotateX( -90deg ) translateZ( 24vh );
+    -ms-transform:rotateX( -90deg ) translateZ( 24vh );
+     -o-transform:rotateX( -90deg ) translateZ( 24vh );
+        transform:rotateX( -90deg ) translateZ( 24vh );
+}
+.a:checked ~ .three-d-cube{
+-webkit-transform:translateZ( -24vh ) rotateY(    0deg );
+   -moz-transform:translateZ( -24vh ) rotateY(    0deg );
+    -ms-transform:translateZ( -24vh ) rotateY(    0deg );
+     -o-transform:translateZ( -24vh ) rotateY(    0deg );
+        transform:translateZ( -24vh ) rotateY(    0deg );
+}
+.b:checked ~ .three-d-cube{
+-webkit-transform:translateZ( -24vh ) rotateX( -180deg );
+   -moz-transform:translateZ( -24vh ) rotateX( -180deg );
+    -ms-transform:translateZ( -24vh ) rotateX( -180deg );
+     -o-transform:translateZ( -24vh ) rotateX( -180deg );
+        transform:translateZ( -24vh ) rotateX( -180deg );
+}
+.c:checked ~ .three-d-cube{
+-webkit-transform:translateZ( -24vh ) rotateY(  -90deg );
+   -moz-transform:translateZ( -24vh ) rotateY(  -90deg );
+    -ms-transform:translateZ( -24vh ) rotateY(  -90deg );
+     -o-transform:translateZ( -24vh ) rotateY(  -90deg );
+        transform:translateZ( -24vh ) rotateY(  -90deg );
+}
+.d:checked ~ .three-d-cube{
+-webkit-transform:translateZ( -24vh ) rotateY(   90deg );
+   -moz-transform:translateZ( -24vh ) rotateY(   90deg );
+    -ms-transform:translateZ( -24vh ) rotateY(   90deg );
+     -o-transform:translateZ( -24vh ) rotateY(   90deg );
+        transform:translateZ( -24vh ) rotateY(   90deg );
+}
+.e:checked ~ .three-d-cube{
+-webkit-transform:translateZ( -24vh ) rotateX(  -90deg );
+   -moz-transform:translateZ( -24vh ) rotateX(  -90deg );
+    -ms-transform:translateZ( -24vh ) rotateX(  -90deg );
+     -o-transform:translateZ( -24vh ) rotateX(  -90deg );
+        transform:translateZ( -24vh ) rotateX(  -90deg );
+}
+.f:checked ~ .three-d-cube{
+-webkit-transform:translateZ( -24vh ) rotateX(   90deg );
+   -moz-transform:translateZ( -24vh ) rotateX(   90deg );
+    -ms-transform:translateZ( -24vh ) rotateX(   90deg );
+     -o-transform:translateZ( -24vh ) rotateX(   90deg );
+        transform:translateZ( -24vh ) rotateX(   90deg );
+}
+.three-d-bullet{
+margin:56vh 1vh 0 0;
+float:left;
+}
+.three-d-bullet:first-child{
+margin:56vh 1vh 0 15.7vh;
+}
+
+.expand-3d{
+  height:100vh;
+  width:100vw;
+}
+.pic{
+  width:48vh;
+height:48vh;
+  position:relative;
+  -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+
+.outer-picture-container{
+  width:90vw;
+  height:90vh;
+  position:absolute;
+  left:-21vw;
+  border: 1px solid black;
+  
+}
+
+.padding{
+ 
+}
+
+.pic-closed{
+   width:0px;
+    height:0px;
+    margin-left:45vw;
+    margin-right:45vw;
+    margin-top:50vh;
+    margin-bottom:50vh;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+.pic-open{
+    width:90vw;
+    height: 100vh;
+    margin-left:0px;
+    margin-right:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    z-index: 9;
+}
+
+.pic1{
+  background-image: url(../images/pic1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.pic2{
+  background-image: url(../images/pic2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.pic3{
+  background-image: url(../images/pic3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.pic4{
+  background-image: url(../images/pic4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.pic5{
+  background-image: url(../images/pic5.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.pic6{
+  background-image: url(../images/pic6.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.pic1r{
+  background-image: url(../images/pic1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+
+.pic2r{
+  background-image: url(../images/pic2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+
+.pic3r{
+  background-image: url(../images/pic3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+
+.pic4r{
+  background-image: url(../images/pic4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+
+.pic5r{
+  background-image: url(../images/pic5.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+
+.pic6r{
+  background-image: url(../images/pic6.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:2
+}
+
+.expand-pic{
+  width:3vh;
+  height:3vh;
+  position: absolute;
+  top:10px;
+  left:10px;
+  border:1px solid black;
+  background-color:white;
+  cursor: pointer;
+}
+
+.despan-pic{
+  width:5vh;
+  height:5vh;
+  position: absolute;
+  top:10px;
+  left:10px;
+  border:1px solid black;
+  background-color:white;
+  cursor: pointer;
+}
+
+.pic-expanded{
+  width:90vw;
+  height:90vh;
+  position:absolute;
+  left:-34vw;
+  top:-20vh;
+  z-index: 7;
+  -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+
+.threed1{
+  width:100vw;
+  height:100vh;
+  position:absolute;
+  left:-34vw;
+  top:-20vh;
+  padding-left: 35.5vh;
+  padding-top: 20vh;
+  padding-right: 35.5vh;
+  padding-bottom: 20vh;
+}
+
+.padding-remove{
+  padding:0px;
+}

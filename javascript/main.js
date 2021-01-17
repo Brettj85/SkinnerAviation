@@ -2,6 +2,8 @@ document.getElementById("hamburg").addEventListener("click", hamburgerAction);
 document.getElementById("CFIS").addEventListener("click", cfiSwap);
 document.getElementById("CFIS2").addEventListener("click", cfiSwap);
 document.getElementById("CFISExpand").addEventListener("click", cfiExpand);
+document.getElementById("despanPicture").addEventListener("click", closePic);
+
 
 var base_resource = document.querySelectorAll(".menu-item");
 for (var i = 0; i < base_resource.length; i++) {
@@ -11,8 +13,198 @@ for (var i = 0; i < base_resource.length; i++) {
   });
 }
 
+var base_resource = document.querySelectorAll(".expand-pic");
+for (var i = 0; i < base_resource.length; i++) {
+  base_resource[i].addEventListener("click", function(e) {
+    expandPicture(this.getAttribute("label"));
+    e.preventDefault();
+  });
+}
+
+function expandPicture(element) {
+    document.getElementById("hdc").classList.toggle("invisible");
+    document.getElementById("hdc").classList.toggle("visible");
+    var PlacePicture = document.getElementById('hiddenContainer');
+    switch (element) {
+    case "picture1":
+        if (PlacePicture.classList.contains("pic1r")){
+            PlacePicture.classList.remove("pic1r")
+        }
+
+        if (PlacePicture.classList.contains("pic2r")){
+            PlacePicture.classList.remove("pic2r")
+        }
+
+        if (PlacePicture.classList.contains("pic3r")){
+            PlacePicture.classList.remove("pic3r")
+        }
+
+        if (PlacePicture.classList.contains("pic4r")){
+            PlacePicture.classList.remove("pic4r")
+        }
+
+        if (PlacePicture.classList.contains("pic5r")){
+            PlacePicture.classList.remove("pic5r")
+        }
+
+        if (PlacePicture.classList.contains("pic6r")){
+            PlacePicture.classList.remove("pic6r")
+        }
+
+        PlacePicture.classList.add("pic1r")
+        
+    break;
+    case "picture2":
+        if (PlacePicture.classList.contains("pic1r")){
+            PlacePicture.classList.remove("pic1r")
+        }
+
+        if (PlacePicture.classList.contains("pic2r")){
+            PlacePicture.classList.remove("pic2r")
+        }
+
+        if (PlacePicture.classList.contains("pic3r")){
+            PlacePicture.classList.remove("pic3r")
+        }
+
+        if (PlacePicture.classList.contains("pic4r")){
+            PlacePicture.classList.remove("pic4r")
+        }
+
+        if (PlacePicture.classList.contains("pic5r")){
+            PlacePicture.classList.remove("pic5r")
+        }
+
+        if (PlacePicture.classList.contains("pic6r")){
+            PlacePicture.classList.remove("pic6r")
+        }
+
+        PlacePicture.classList.add("pic2r")
+    break;
+    case "picture3":
+        if (PlacePicture.classList.contains("pic1r")){
+            PlacePicture.classList.remove("pic1r")
+        }
+
+        if (PlacePicture.classList.contains("pic2r")){
+            PlacePicture.classList.remove("pic2r")
+        }
+
+        if (PlacePicture.classList.contains("pic3r")){
+            PlacePicture.classList.remove("pic3r")
+        }
+
+        if (PlacePicture.classList.contains("pic4r")){
+            PlacePicture.classList.remove("pic4r")
+        }
+
+        if (PlacePicture.classList.contains("pic5r")){
+            PlacePicture.classList.remove("pic5r")
+        }
+
+        if (PlacePicture.classList.contains("pic6r")){
+            PlacePicture.classList.remove("pic6r")
+        }
+
+        PlacePicture.classList.add("pic3r")
+    break;
+    case "picture4":
+       if (PlacePicture.classList.contains("pic1r")){
+            PlacePicture.classList.remove("pic1r")
+        }
+
+        if (PlacePicture.classList.contains("pic2r")){
+            PlacePicture.classList.remove("pic2r")
+        }
+
+        if (PlacePicture.classList.contains("pic3r")){
+            PlacePicture.classList.remove("pic3r")
+        }
+
+        if (PlacePicture.classList.contains("pic4r")){
+            PlacePicture.classList.remove("pic4r")
+        }
+
+        if (PlacePicture.classList.contains("pic5r")){
+            PlacePicture.classList.remove("pic5r")
+        }
+
+        if (PlacePicture.classList.contains("pic6r")){
+            PlacePicture.classList.remove("pic6r")
+        }
+
+        PlacePicture.classList.add("pic4r")
+    break;
+    case "picture5":
+       if (PlacePicture.classList.contains("pic1r")){
+            PlacePicture.classList.remove("pic1r")
+        }
+
+        if (PlacePicture.classList.contains("pic2r")){
+            PlacePicture.classList.remove("pic2r")
+        }
+
+        if (PlacePicture.classList.contains("pic3r")){
+            PlacePicture.classList.remove("pic3r")
+        }
+
+        if (PlacePicture.classList.contains("pic4r")){
+            PlacePicture.classList.remove("pic4r")
+        }
+
+        if (PlacePicture.classList.contains("pic5r")){
+            PlacePicture.classList.remove("pic5r")
+        }
+
+        if (PlacePicture.classList.contains("pic6r")){
+            PlacePicture.classList.remove("pic6r")
+        }
+
+        PlacePicture.classList.add("pic5r")
+    break;
+    case "picture6":
+       if (PlacePicture.classList.contains("pic1r")){
+            PlacePicture.classList.remove("pic1r")
+        }
+
+        if (PlacePicture.classList.contains("pic2r")){
+            PlacePicture.classList.remove("pic2r")
+        }
+
+        if (PlacePicture.classList.contains("pic3r")){
+            PlacePicture.classList.remove("pic3r")
+        }
+
+        if (PlacePicture.classList.contains("pic4r")){
+            PlacePicture.classList.remove("pic4r")
+        }
+
+        if (PlacePicture.classList.contains("pic5r")){
+            PlacePicture.classList.remove("pic5r")
+        }
+
+        if (PlacePicture.classList.contains("pic6r")){
+            PlacePicture.classList.remove("pic6r")
+        }
+
+        PlacePicture.classList.add("pic6r")
+    break;
+    }
+    zIndex(500);
+    document.getElementById("hiddenContainer").classList.toggle("pic-closed");
+    document.getElementById("hiddenContainer").classList.toggle("pic-open");
+}
+
+function closePic(){
+    document.getElementById("hdc").classList.toggle("invisible");
+    document.getElementById("hdc").classList.toggle("visible");
+    document.getElementById("hiddenContainer").classList.toggle("pic-closed");
+    document.getElementById("hiddenContainer").classList.toggle("pic-open");
+}
+
+
 function scrollPageTo(target) {
-    var myElement
+    var myElement;
     switch (target) {
     case "Home":
         myElement = document.getElementById('header');
